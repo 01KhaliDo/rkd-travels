@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Bokningar</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="scripts.js" ></script>
+   <script>
+    async function fetchBookings() {
+        const userId = localStorage.getItem('user_id');  
+        if (!userId) {
+            document.getElementById('bookingsContainer').innerHTML = "<p class='message'>Du måste vara inloggad för att se dina bokningar.</p>";
+            return;
+        }
+
+        const response = await fetch(`/api/getBookings?user_id=${userId}`);
+        const result = await response.json();
+
+        const bookingsContainer = document.getElementById('bookingsContainer');
+        bookingsContainer.innerHTML = '';
+
+        if (result.status === "success") {
+            result.bookings.forEach(booking => {
+                const card = document.createElement('div');
+                card.classList.add('booking-card');
+
+                card.innerHTML = `
+                    <h3>${booking.destination}</h3>
+                    <p><strong>Bokningsnummer:</strong> #${booking.booking_id}</p>
+                    <p><strong>Hotell:</strong> ${booking.hotel_name} (${booking.hotel_stars} ⭐)</p>
+                    <p><strong>Flygbolag:</strong> ${booking.flight_airline}</p>
+                    <p><strong>Avresa:</strong> ${new Date(booking.departure_time).toLocaleDateString()}</p>
+                    <p><strong>Hemresa:</strong> ${new Date(booking.return_time).toLocaleDateString()}</p>
+                    <p><strong>Antal resenärer:</strong> ${booking.travels_num}</p>
+                    <p><strong>Pris:</strong> ${booking.total_price} kr</p>
+                    <p><strong>Bokningsdatum:</strong> ${new Date(booking.booking_date).toLocaleDateString()}</p>
+                    <button class="cancel-button" onclick="cancelBooking(${booking.booking_id})">Avboka</button>
+                `;
+
+                bookingsContainer.appendChild(card);
+            });
+        } else {
+            bookingsContainer.innerHTML = `<p class='message'>${result.message}</p>`;
+        }
+    }
+
+    async function cancelBooking(bookingId) {
+        if (!confirm("Är du säker på att du vill avboka denna resa?")) return;
+
+        const response = await fetch(`/api/cancelBooking`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ booking_id: bookingId })
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+            alert("Bokningen har avbokats!");
+            location.reload();  // Laddar om sidan för att uppdatera listan
+        } else {
+            alert(`Fel vid avbokning: ${result.message}`);
+        }
+    }
+
+    window.onload = fetchBookings;
+
+    </script> 
+
+</head> 
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="Logotyp" class="logo">
+        </a>
+    </div>
+        
+    </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="bookings.html" class="nav-link">Mina bokningar</a>
+        <a href="profile.html" class="nav-link">Min profil</a>
+        <a href="login.html" id="authLink" class="nav-link">Logga in</a>
+        <a href="about.html" class="nav-link">Om oss</a>
+
+    </nav> 
+    <!--<div class="extra-line"></div>  Extra linje här -->
+
+    <h1>Mina Bokningar</h1>
+    <div class="bookings-container" id="bookingsContainer">
+        <!-- Bokningar kommer att visas här -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,503 @@
+/* ===== Grundläggande layout för hela sidan ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F4F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+} 
+.container { 
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #f0f4f8;
+
+} 
+
+/* ===== Behåll separata behållare för varje sida ===== */
+.login-container, 
+.register-container { 
+    background-color: #fff; 
+    width: 100%;
+    max-width: 360px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* ===== Rubrikstil ===== */
+h1 { 
+    padding-top: 10px;
+    font-size: 28px;
+    color: #1E3A5F;
+    margin-bottom: 20px;
+}
+
+/* ===== Formulärfält ===== */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+.forgot-password:hover {
+    text-decoration: underline;
+} 
+
+/* ===== Divider för att separera alternativ ===== */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+/* ===== Inloggnings- och registreringsknappar ===== */
+
+.login-btn, 
+.register-btn {
+    background-color: #1E3A5F;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+} 
+
+.login-btn:hover,
+.register-btn:hover {
+    background-color: #4A90E2;
+}*/ 
+
+
+/* ===== Länk för att navigera mellan sidorna ===== */
+.register-link,
+.login-link {
+    color: #1E3A5F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover,
+.login-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =================== TRIPS-SIDAN =================== */
+/* ===== Grid-layout för resekorten ===== */
+.trips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ===== Kortdesign för resor ===== */
+.trip-card {
+    background-color: #fff;
+    border: 2px solid #1E3A5F;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; 
+    margin-top: 10%; 
+}
+
+.trip-card:hover {
+    transform: scale(1.03); /* Lyft-effekt vid hover */
+}
+
+/* ===== Bildstil för varje resa ===== */
+.trip-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===== Innehållet i resekorten ===== */ 
+.trip-content {
+    padding: 15px;
+    text-align: left; 
+
+
+} 
+
+.trip-content h3 {
+    color: #1E3A5F;
+    margin-top: 0;
+    margin-bottom: 10px; 
+    font-weight: bold;
+
+} 
+
+/* ===== Knappar för att boka och visa mer ===== */
+.button {
+    background-color: #1E3A5F;  /* Matchar loggans mörkblå */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 30%;
+    transition: background-color 0.3s ease;
+} 
+
+.trip-content .button {
+   
+    margin-top: 10%;
+    
+}
+
+.button:hover {
+    background-color: #4A90E2;  /* Ljusare blå vid hover */
+}
+
+
+/* ===== Lista med reseinformation ===== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    color: #555;
+}
+/* ======== naven ====================== */ 
+
+.navbar {
+    background-color: #f5f5f5; 
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-top: 4px solid #1E3A5F; /* Orange linje överst */  
+    border-bottom: 4px solid #1E3A5F;
+    width: 103%; 
+    gap: 50px; 
+
+    position: sticky;
+    top: 0; /* Fäster navigationen längst upp */
+    z-index: 1000; /* Ser till att navigationen ligger över allt annat */
+
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+    color: #1E3A5F;
+    border-bottom: 2px solid #1E3A5F; /* blå linje vid hover */
+}
+
+.nav-link.active {
+    color: #1E3A5F;
+    border-bottom: 3px solid #1E3A5F; /* blå linje för aktiv sida */
+} 
+
+/* =================== PROFIL =================== */
+
+.profile-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* =================== LOGO =================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;         /* Centrera loggan vertikalt */
+    padding: 10px;               /* Ger lite luft runt loggan */
+}
+
+.logo {
+    width: 100px;   /* Justera storleken vid behov */
+    height: auto;
+    margin-right: 20px; /* Minskar mellanrummet till text eller andra element */
+}
+
+/* =================== BOKNINGAR =================== */
+
+.bookings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.booking-card {
+    background-color: #fff;
+    border: 2px solid #1E3A5F;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.booking-card h3 {
+    color: #1E3A5F;
+    margin-top: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+strong {
+    color: #333;
+}
+/* =================== HEADER =================== */
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+   
+}
+
+.message {
+    text-align: center;
+    padding: 10px;
+}
+
+/* =================== search index  =================== */
+
+.search-container {
+    border: 2px solid #1E3A5F; /* Tydlig kantlinje */
+    background-color: #f0f4f8;
+    width: 100%; /* Öka bredden */
+    max-width: 600px; /* Begränsa maxbredden för att hålla det snyggt */
+    padding: 20px 30px; /* Mindre padding för att göra den kortare */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Mjuk skugga */
+    text-align: left;
+    margin: 30px auto; /* Centrerar formen horisontellt */
+}
+
+.search-container h1 {
+    text-align: center;
+    color: #1E3A5F;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Minskad spacing för att korta ner formen */
+}
+
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    background-color: #1E3A5F;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.search-button:hover {
+    background-color: #4A90E2; /* Mörkare blå vid hover */ 
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #1E3A5F;
+    padding: 10px;
+    text-align: center;
+}
+
+.results-table th {
+    background-color: #1E3A5F;
+    color: #fff;
+} 
+
+
+/* ===================  booking sida =================== */
+
+
+/* ===================  booking sida =================== */
+
+
+.booking-form-container {
+    flex: 1; /* Antal resenärer tar upp halva utrymmet */
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #1E3A5F;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+.trip-content p {
+    margin-bottom: 8px; /* Mer mellanrum i text */ 
+    max-width: 400px;
+
+}
+
+.booking-form-container {
+    max-width: 400px;
+    text-align: center;
+} 
+
+.button {
+    width: 70%; /* Gör knappen smalare */
+    margin-top: 20px; /* Extra mellanrum ovanför knappen */
+    background-color: #1E3A5F;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.cancel-button {
+    background-color: #b84242;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.cancel-button:hover {
+    background-color: #cc0000;
+}
+ 
+
+/* Anpassning för mobiler */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px; /* Mindre textstorlek för bättre läsbarhet */
+    }
+
+    .container {
+        width: 100%; /* Använd hela bredden för bättre utrymme */
+        padding: 15px;
+        box-shadow: none; /* Mjukare layout för mobil */
+    }
+
+    .search-container {
+        background-color: #f0f4f8;
+        border: none;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .results-table {
+        width: 80%; /* Anpassa tabellen */
+    }
+
+    .results-table th, .results-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .trips-container {
+        flex: 2;
+        display: grid;
+        grid-template-columns: 1fr; /* En kolumn för bättre visning */
+        gap: 10px; 
+        max-width: 100px;
+
+    }
+
+    .trip-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: left; 
+    }
+
+    .trip-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .search-button {
+        width: 100%; /* Knappen fyller hela bredden */
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

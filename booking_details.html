@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resedetaljer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body> 
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="Logotyp" class="logo">
+        </a>
+    </div>
+
+    <nav class="navbar"> 
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="bookings.html" class="nav-link">Mina bokningar</a>
+        <a href="profile.html" class="nav-link">Min profil</a>
+        <a href="login.html" id="authLink" class="nav-link">Logga in</a>
+        <a href="about.html" class="nav-link">Om oss</a>
+
+    </nav>  
+
+    <h1>Bokningsdetaljer</h1>
+    <div class="details-container">
+        <!-- Resedetaljer till vänster -->
+        <div class="trip-container">
+            <div id="tripDetails" class="trip-card">
+                <img id="tripImage" src="" alt="Resebild" class="trip-image">
+                <div class="trip-content">
+                    <h2 id="tripTitle"></h2>
+                    <p id="tripDescription"></p>
+                    <p><strong>Pris:</strong> <span id="tripPrice"></span> kr</p>
+                    <p><strong>Avresa:</strong> <span id="tripDeparture"></span></p>
+                    <p><strong>Hemresa:</strong> <span id="tripReturn"></span></p>
+                    <p><strong>Platser kvar:</strong> <span id="availableSeats"></span></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Antal resenärer till höger -->
+        <div class="booking-form-container">
+            <form id="bookingForm">
+                <label for="numTravelers">Antal resenärer:</label>
+                <select id="numTravelers" name="numTravelers" onchange="addTravelerForms()">
+                    <option value="1">1 person</option>
+                    <option value="2">2 personer</option>
+                    <option value="3">3 personer</option>
+                    <option value="4">4 personer</option>
+                </select>
+    
+                <div id="travelersDetails"></div>
+    
+                <button type="button" class="button" onclick="submitBooking()">Bekräfta Bokning</button>
+            </form>
+        </div>
+    </div>
+    
+
+</body>
+</html>

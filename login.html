@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga in</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+   
+    
+</head> 
+
+<body>
+    <div class="logo-container">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Logotyp" class="logo">
+            </a>
+        </div>
+        
+    </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="register.html" class="nav-link">Skapa konto</a>
+        <a href="about.html" class="nav-link">Om oss</a>
+
+
+     </nav>
+    <br><br> 
+    <div class="login-container">
+        <h1>Logga in</h1>
+
+        <label for="login_email">E-post</label>
+        <input type="email" id="login_email" placeholder="Ange din e-post" required>
+
+        <label for="login_password">Lösenord</label>
+        <div class="password-container">
+            <input type="password" id="login_password" placeholder="Ange ditt lösenord" required>
+          
+        </div>
+
+    <br><br> 
+
+        <button onclick="loginUser()" class="login-btn">LOGGA IN</button>
+
+      
+
+        <button class="register-btn" onclick="window.location.href='register.html'">SKAPA KONTO</button>
+
+        
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            localStorage.removeItem('user_id');  // Rensar användarens session vid varje sidladdning
+        });
+    </script>
+    
+</body>
+</html>

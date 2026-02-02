@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skapa konto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>         
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="Logotyp" class="logo">
+        </a>
+    </div>
+        
+    <nav class="navbar">
+         <a href="index.html" class="nav-link">Hem</a>
+         <a href="login.html" id="authLink" class="nav-link">Logga in</a>
+         <a href="about.html" class="nav-link">Om oss</a>
+
+    </nav>
+    <br><br> 
+    
+    <div class="register-container">
+        <h1>Skapa konto</h1>
+
+        <label for="register_first_name">Förnamn</label>
+        <input type="text" id="register_first_name" placeholder="Ange ditt förnamn" required>
+
+        <label for="register_last_name">Efternamn</label>
+        <input type="text" id="register_last_name" placeholder="Ange ditt efternamn" required>
+
+        <label for="register_email">E-post</label>
+        <input type="email" id="register_email" placeholder="Ange din e-post" required>
+
+        <label for="register_phone">Mobilnummer</label>
+        <input type="text" id="register_phone" placeholder="Ange ditt mobilnummer" required>
+
+        <label for="register_password">Lösenord</label>
+        <input type="password" id="register_password" placeholder="Skapa ett lösenord" required>
+        <br><br>
+
+        <button onclick="registerUser()" class="register-btn">SKAPA</button>
+        <br>
+
+        <button class="login-btn" onclick="window.location.href='login.html'">LOGGA IN</button>
+
+        <p id="register_response"></p>
+    </div> 
+</div>
+</body>
+</html>

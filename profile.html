@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Profil</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="scripts.js" ></script>
+    <script>
+        async function fetchUserProfile() {
+            const userId = localStorage.getItem('user_id');
+
+            if (!userId) {
+                document.getElementById('profileDetails').innerHTML = "<p> Du måste vara inloggad för att se dina bokningar.</p>";                return;
+            }
+
+            const response = await fetch(`/api/getUserProfile?user_id=${userId}`);
+            const result = await response.json();
+
+            if (result.status === "success") {
+                const user = result.user;
+                document.getElementById('profileDetails').innerHTML = `
+                    <div class="profile-card">
+                        <p><strong>Förnamn:</strong> ${user.first_name}</p>
+                        <p><strong>Efternamn:</strong> ${user.last_name}</p>
+                        <p><strong>E-post:</strong> ${user.email}</p>
+                        <p><strong>Telefonnummer:</strong> ${user.phone || "Ej angivet"}</p>
+                        <p><strong>Skapad:</strong> ${new Date(user.created_at).toLocaleDateString()}</p>
+                    </div>
+                `;
+            } else { 
+                profileDetails.innerHTML = `<p>${result.message}</p>`; 
+                //document.getElementById('profileDetails').innerHTML = `<p>${result.message}</p>`;
+            }
+        }
+
+        window.onload = fetchUserProfile;
+    </script> 
+  
+</head>
+<body> 
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="Logotyp" class="logo">
+        </a>
+    </div>
+        
+    </div>
+    <nav class="navbar"> 
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="bookings.html" class="nav-link">Mina bokningar</a>
+        <a href="profile.html" class="nav-link">Min profil</a>
+        <a href="login.html" id="authLink" class="nav-link">Logga in</a>
+        <a href="about.html" class="nav-link">Om oss</a>
+
+    </nav> 
+    <h1>Min Profil</h1>
+    <div class="extra-line"></div> <!-- Extra linje här --> <br> 
+    
+    <div id="profileDetails"></div>
+</body>
+</html>

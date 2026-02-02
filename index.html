@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="Logotyp" class="logo">
+        </a>
+    </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="bookings.html" class="nav-link">Mina bokningar</a>
+        <a href="profile.html" class="nav-link">Min profil</a>
+        <a href="login.html" id="authLink" class="nav-link">Logga in</a>
+        <a href="about.html" class="nav-link">Om oss</a>
+
+
+    </nav> 
+    <h1>Sök efter resor</h1>
+    <div class="container">
+        <div class="search-container"> 
+            <form id="travelSearchForm">
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination">
+                        <option value="paris">Paris, Frankrike</option>
+                        <option value="london">London, Storbritannien</option>
+                        <option value="newyork">New York, USA</option>
+                        <option value="malaga">Málaga, Spanien</option>
+                        <option value="bangkok">Bangkok, Thailand</option>
+                        <option value="dubai">Dubai, Förenade Arabemiraten</option>
+                        <option value="kreta">Kreta, Grekland</option>
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="berlin">Berlin, Tyskland</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelers">Antal resenärer</label>
+                    <select id="travelers" name="travelers">
+                        <option value="1">1 person</option>
+                        <option value="2">2 personer</option>
+                        <option value="3">3 personer</option>
+                        <option value="4">4 personer</option>
+                        <option value="5">5 personer</option>
+                    </select>
+                </div>
+
+                <!-- Onclick för att anropa searchFlights-funktionen -->
+                <button type="submit" class="search-button">Sök flyg</button>
+            </form>
+        </div>
+
+        <h1>Tillgängliga resor</h1>
+        <table id="searchResultsTable" class="results-table">
+            <thead>
+                <tr>
+                    <th>Stad</th>
+                    <th>Hotell</th>
+                    <th>Flygbolag</th>
+                    <th>Pris</th>
+                    <th>Avgång</th>
+                    <th>Hemresa</th> 
+                    <th>Antal biljter</th>
+                    <th>Boka</th>
+                </tr>
+            </thead>
+            <tbody id="searchResultsBody">
+                <!-- Resultat kommer att visas här -->
+            </tbody>
+        </table>
+    </div>
+    
+            <br><br>
+         <h1>Populära Charterresor</h1>   
+         <p>Populära Charterresor hjälper dig att hitta de bästa resorna till sol och värme. Oavsett om du vill slappa på <br>
+            stranden eller upptäcka nya platser, har vi något för dig. Boka enkelt och njut av en härlig semester!
+            </p>
+
+    <div class="trips-container" id="tripsContainer">
+        <!-- Resor kommer att läggas till här dynamiskt -->
+    </div>  
+  
+
+    <template id="tripCardTemplate">
+        <div class="trip-card">
+            <img src="" alt="" class="trip-image">
+            <div class="trip-content">
+                <h3></h3>
+                <ul>
+                    <li class="city-info"></li>
+                    <li class="hotel-info"></li>
+                    <li class="flight-info"></li>
+                    <li class="price-info"></li>
+                </ul>
+               
+            </div>
+        </div>
+    </template>
+    <script src="scripts.js" defer  ></script>
+
+</body>
+</html>

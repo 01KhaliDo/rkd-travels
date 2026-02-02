@@ -1,0 +1,56 @@
+-- Users (Användare)
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    profile_image_url VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Trips (Fördefinierade charterresor)
+CREATE TABLE Trips (
+    trip_id INT AUTO_INCREMENT PRIMARY KEY,
+    destination VARCHAR(100) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    hotel_name VARCHAR(100) NOT NULL,
+    hotel_stars INT CHECK (hotel_stars BETWEEN 1 AND 5),
+    flight_airline VARCHAR(100) NOT NULL,
+    flight_number VARCHAR(20) NOT NULL,
+    departure_airport VARCHAR(50) NOT NULL,
+    arrival_airport VARCHAR(50) NOT NULL,
+    departure_time DATETIME NOT NULL,
+    return_time DATETIME NOT NULL,
+    duration_days INT NOT NULL,
+    price INT NOT NULL,
+    available_seats INT NOT NULL CHECK (available_seats = 0),
+    image_url VARCHAR(255),
+    description TEXT
+);
+
+-- Bookings (Bokningar)
+CREATE TABLE Bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    trip_id INT NOT NULL,
+    num_travelers INT NOT NULL CHECK (num_travelers  0),
+    total_price INT NOT NULL,
+    booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    image_url VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (trip_id) REFERENCES Trips(trip_id) ON DELETE CASCADE
+);
+
+-- Reviews (Reserecensioner)
+CREATE TABLE Reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    trip_id INT NOT NULL,
+    rating INT CHECK (rating BETWEEN 1 AND 5) NOT NULL,
+    review_text TEXT,
+    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (trip_id) REFERENCES Trips(trip_id) ON DELETE CASCADE
+);
