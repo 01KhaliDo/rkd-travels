@@ -1,42 +1,65 @@
-# RKD Travels
+# **RKD Travels**
 
-**Notera: Detta är ett arkiverat projekt för portfolio-syfte.**
+**Notera:** Detta är ett **arkiverat projekt** för **portfolio-syfte**.
 
-RKD Travels är ett webbaserat bokningssystem utvecklat för att demonstrera fullstack-funktionalitet utan tunga ramverk. Projektet visar hur man bygger en resebokningsplattform från grunden med Python och MySQL.
+**RKD Travels** är ett **webbaserat bokningssystem** utvecklat för att demonstrera **fullstack-funktionalitet** utan att använda **tunga ramverk**.  
+Projektet visar hur man bygger en **resebokningsplattform från grunden** med **Python** och **MySQL**.
 
-## Projektöversikt
-Systemet byggdes för att hantera hela flödet från att en användare letar efter en resa till att bokningen är genomförd och betald (simulerat). Fokus låg på att skapa en robust backend en responsiv frontend. 
+---
 
-## Om Utvecklarna
-Projektet är skapat av tre studenter:
+## **Projektöversikt**
+
+Systemet byggdes för att hantera **hela flödet** från att en användare letar efter en resa till att bokningen är **genomförd och betald (simulerat)**.  
+Fokus låg på att skapa en **robust backend** och en **responsiv frontend**.
+
+---
+
+## **Om Utvecklarna**
+
+Projektet är skapat av **tre studenter**:
+
 - **Roni Hussain**
 - **Khalid Saleh**
 - **Dinent Kaciu**
 
-Tillsammans har vi byggt denna plattform för att demonstrera moderna utvecklingsprinciper utan att förlita oss på färdiga ramverk.
+Tillsammans har vi byggt denna plattform för att demonstrera **moderna utvecklingsprinciper** utan att förlita oss på **färdiga ramverk**.
 
-## Huvudfunktioner
+---
 
-### 👤 Användarhantering
+## **Huvudfunktioner**
+
+### **👤 Användarhantering**
 - **Registrering & Inloggning:** Säkert system för att skapa konton och logga in.
-- **Profil:** Användare kan se sina uppgifter och bokningshistorik.
+- **Profil:** Användare kan se sina uppgifter och **bokningshistorik**.
 
-### ✈️ Resor & Bokning
-- **Sök & Filtrera:** Möjlighet att se tillgängliga resor med detaljer om flyg, hotell och priser.
-- **Dynamisk Bokning:** Systemet kontrollerar platstillgång i realtid.
-- **Avbokning:** Användare kan avboka sina resor, vilket automatiskt uppdaterar platstillgången i databasen.
+### **✈️ Resor & Bokning**
+- **Sök & Filtrera:** Möjlighet att se tillgängliga resor med detaljer om **flyg, hotell och priser**.
+- **Dynamisk Bokning:** Systemet kontrollerar **platstillgång i realtid**.
+- **Avbokning:** Användare kan avboka sina resor, vilket automatiskt uppdaterar **platstillgången i databasen**.
 
-### 🔧 Backend & API
-- **Skräddarsytt API:** Ett REST-liknande API byggt helt med Pythons.
-- **Databasintegration:** Direkt koppling mot MySQL för att hantera transaktioner och data.
+### **🔧 Backend & API**
+- **Skräddarsytt API:** Ett **REST-liknande API** byggt helt med **Python**.
+- **Databasintegration:** Direkt koppling mot **MySQL** för att hantera **transaktioner och data**.
+
+---
+
+## **Teknisk Stack**
+
+| **Del**       | **Teknik** |
+|---------------|-----------|
+| **Backend**   | **Python (Standardbibliotek + PyMySQL)** |
+| **Frontend**  | **HTML5, CSS3, JavaScript** |
+| **Databas**   | **MySQL (Tidigare hostad på AWS)** |
+
+---
+
+## **Projektstatus**
+
+📦 **Arkiverat**  
+Projektet är **inte under aktiv utveckling** och finns kvar för **portfolio- och utbildningssyfte**.
 
 
-## Teknisk Stack
-- **Backend:** Python (Standardbibliotek + PyMySQL)
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Databas:** MySQL (Tidigare hostad på AWS)
-
-# **✈️ RKD Travels**
+# **✈️ RKD Travels** (English)
 
 **Note:** This is an archived project created for **portfolio purposes**.
 
@@ -105,6 +128,7 @@ This project is **not under active development** and is maintained **strictly fo
 Add screenshots or GIFs to showcase the **UI and booking flow**:
 
 ```markdown
+
 
 
 
