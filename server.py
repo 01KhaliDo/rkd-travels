@@ -4,13 +4,12 @@ import pymysql
 from urllib.parse import urlparse
 from datetime import datetime
 
-# Databaskonfiguration för RKD
 DB_CONFIG = {
-    "host": "database-1.cziqsuoasgyi.eu-north-1.rds.amazonaws.com",
+    "host": "",
     "user": "admin",
-    "password": "take1234",
-    "database": "RKD",
-    "charset": "utf8mb4",
+    "password": "",
+    "database": "",
+    "charset": "",
     "cursorclass": pymysql.cursors.DictCursor
 }
 
@@ -18,7 +17,6 @@ DB_CONFIG = {
 INTERFACE = "127.0.0.1"
 PORT = 8080
 
-# Konverterar datetime-objekt till ISO-format för JSON
 def datetime_default(obj):
     if isinstance(obj, datetime):
         return obj.isoformat()
@@ -228,7 +226,6 @@ class RequestHandler(SimpleHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=RequestHandler):
     server_address = (INTERFACE, PORT)
     httpd = server_class(server_address, handler_class)
-    print(f"🚀 Starting HTTP server at http://{INTERFACE}:{PORT} ...")
     httpd.serve_forever()
 
 if __name__ == "__main__":
