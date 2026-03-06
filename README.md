@@ -123,12 +123,6 @@ This project is **not under active development** and is maintained **strictly fo
 
 ---
 
-## **📸 Screenshots (Optional)**
+## **📸 Demo Video**
 
-Add screenshots or GIFs to showcase the **UI and booking flow**:
-
-```markdown
-
-
-
-
+https://github.com/01KhaliDo/rkd-travels/raw/main/RKD_compressed.mp4
