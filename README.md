@@ -1,128 +1,112 @@
-# **RKD Travels**
+# RKD Travels
 
-**Notera:** Detta är ett **arkiverat projekt** för **portfolio-syfte**.
+> Detta är ett arkiverat projekt skapat för portfolio-syfte.
 
-**RKD Travels** är ett **webbaserat bokningssystem** utvecklat för att demonstrera **fullstack-funktionalitet** utan att använda **tunga ramverk**.  
-Projektet visar hur man bygger en **resebokningsplattform från grunden** med **Python** och **MySQL**.
-
----
-
-## **Projektöversikt**
-
-Systemet byggdes för att hantera **hela flödet** från att en användare letar efter en resa till att bokningen är **genomförd och betald (simulerat)**.  
-Fokus låg på att skapa en **robust backend** och en **responsiv frontend**.
+RKD Travels är ett webbaserat bokningssystem som vi byggde från grunden för att visa hur man hanterar ett fullständigt bokningsflöde utan att använda färdiga ramverk. Projektet är skrivet i Python med MySQL som databas.
 
 ---
 
-## **Om Utvecklarna**
+## Om projektet
 
-Projektet är skapat av **tre studenter**:
-
-- **Roni Hussain**
-- **Khalid Saleh**
-- **Dinent Kaciu**
-
-Tillsammans har vi byggt denna plattform för att demonstrera **moderna utvecklingsprinciper** utan att förlita oss på **färdiga ramverk**.
+Vi ville bygga något som faktiskt fungerar — inte bara ett skal. Systemet hanterar allt från sökning och filtrering av resor till bokning, betalning (simulerad) och avbokning. Allt kopplat mot en riktig databas.
 
 ---
 
-## **Huvudfunktioner**
+## Vilka som byggt det
 
-### **👤 Användarhantering**
-- **Registrering & Inloggning:** Säkert system för att skapa konton och logga in.
-- **Profil:** Användare kan se sina uppgifter och **bokningshistorik**.
+Projektet är gjort av tre studenter:
 
-### **✈️ Resor & Bokning**
-- **Sök & Filtrera:** Möjlighet att se tillgängliga resor med detaljer om **flyg, hotell och priser**.
-- **Dynamisk Bokning:** Systemet kontrollerar **platstillgång i realtid**.
-- **Avbokning:** Användare kan avboka sina resor, vilket automatiskt uppdaterar **platstillgången i databasen**.
-
-### **🔧 Backend & API**
-- **Skräddarsytt API:** Ett **REST-liknande API** byggt helt med **Python**.
-- **Databasintegration:** Direkt koppling mot **MySQL** för att hantera **transaktioner och data**.
+- Roni Hussain
+- Khalid Saleh
+- Dinent Kaciu
 
 ---
 
-## **Teknisk Stack**
+## Vad man kan göra
 
-| **Del**       | **Teknik** |
-|---------------|-----------|
-| **Backend**   | **Python (Standardbibliotek + PyMySQL)** |
-| **Frontend**  | **HTML5, CSS3, JavaScript** |
-| **Databas**   | **MySQL (Tidigare hostad på AWS)** |
+- Registrera och logga in på ett konto
+- Söka efter resor och filtrera på pris, flyg och hotell
+- Boka en resa med kontroll av platstillgång i realtid
+- Avboka och se sin bokningshistorik i profilen
 
----
-
-## **Projektstatus**
-
-📦 **Arkiverat**  
-Projektet är **inte under aktiv utveckling** och finns kvar för **portfolio- och utbildningssyfte**.
-
-
-# **✈️ RKD Travels** (English)
-
-**Note:** This is an archived project created for **portfolio purposes**.
-
-**RKD Travels** is a **web-based travel booking system** built to demonstrate **full-stack development** without relying on heavy frameworks.  
-The project showcases how to build a **complete booking platform from scratch** using **Python** and **MySQL**.
+Backend är byggt som ett eget REST-liknande API helt i Python, kopplat direkt mot MySQL.
 
 ---
 
-## **📌 Project Overview**
+## Teknik
 
-The system handles the **entire booking flow** — from searching for available trips to completing a **simulated payment**.  
-The main focus was to create a **robust backend** combined with a **responsive frontend**, without using **pre-built frameworks**.
-
----
-
-## **👨‍💻 Developers**
-
-This project was developed by **three students**:
-
-- **Roni Hussain**
-- **Khalid Saleh**
-- **Dinent Kaciu**
-
-Together, we built this platform to demonstrate **modern development principles** and a strong understanding of **backend architecture**.
+| Del | Teknik |
+|-----|--------|
+| Backend | Python (standardbibliotek + PyMySQL) |
+| Frontend | HTML, CSS, JavaScript |
+| Databas | MySQL (tidigare hostad på AWS) |
 
 ---
 
-## **🚀 Features**
+## Status
 
-### **👤 User Management**
-- **Secure registration & login**
-- **User profile** with personal information
-- View **booking history**
-
-### **✈️ Travel & Booking**
-- **Search & filter** available trips
-- View **trip details** (flights, hotels, pricing)
-- **Real-time seat availability**
-- **Booking cancellation** with automatic database updates
-
-### **🔧 Backend & API**
-- **Custom REST-like API** built entirely with **Python**
-- **Direct MySQL integration** for transactions and data handling
+Projektet är inte längre under aktiv utveckling. Det finns kvar som referens och för att visa upp vad vi lärde oss.
 
 ---
 
-## **🛠️ Tech Stack**
+## Demo
 
-| **Layer**    | **Technology** |
-|-------------|----------------|
-| **Backend** | **Python (Standard Library + PyMySQL)** |
-| **Frontend** | **HTML5, CSS3, JavaScript** |
-| **Database** | **MySQL (Previously hosted on AWS)** |
+https://github.com/01KhaliDo/rkd-travels/raw/main/RKD_compressed.mp4
+
+---
+---
+
+# RKD Travels (English)
+
+> This is an archived project made for portfolio purposes.
+
+RKD Travels is a web-based travel booking system we built from scratch to show how a full booking flow works without relying on any frameworks. Written in Python with MySQL as the database.
 
 ---
 
-## **📁 Project Status**
+## About the project
 
-📦 **Archived**  
-This project is **not under active development** and is maintained **strictly for portfolio and educational purposes**.
+The goal was to build something that actually works end-to-end — from browsing trips to completing a (simulated) payment. Everything is connected to a real database and handles things like seat availability and cancellations.
 
 ---
 
-## **📸 Demo Video**
+## Who built it
+
+Three students:
+
+- Roni Hussain
+- Khalid Saleh
+- Dinent Kaciu
+
+---
+
+## What you can do
+
+- Register and log in to an account
+- Search and filter available trips by price, flight, and hotel
+- Book a trip with real-time seat availability checks
+- Cancel bookings and view booking history in your profile
+
+The backend is a custom REST-like API built entirely in Python, connected directly to MySQL.
+
+---
+
+## Tech stack
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | Python (Standard Library + PyMySQL) |
+| Frontend | HTML, CSS, JavaScript |
+| Database | MySQL (previously hosted on AWS) |
+
+---
+
+## Status
+
+No longer in active development. Kept here as a reference and to show what we learned during the project.
+
+---
+
+## Demo
 
 https://github.com/01KhaliDo/rkd-travels/raw/main/RKD_compressed.mp4
