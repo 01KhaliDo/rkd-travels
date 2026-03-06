@@ -1,6 +1,6 @@
 # RKD Travels
 
-> Detta är ett arkiverat projekt skapat för portfolio-syfte.
+> Detta är ett arkiverat projekt skapat för portfolio syfte.
 
 RKD Travels är ett webbaserat bokningssystem som vi byggde från grunden för att visa hur man hanterar ett fullständigt bokningsflöde utan att använda färdiga ramverk. Projektet är skrivet i Python med MySQL som databas.
 
@@ -8,7 +8,7 @@ RKD Travels är ett webbaserat bokningssystem som vi byggde från grunden för a
 
 ## Om projektet
 
-Vi ville bygga något som faktiskt fungerar — inte bara ett skal. Systemet hanterar allt från sökning och filtrering av resor till bokning, betalning (simulerad) och avbokning. Allt kopplat mot en riktig databas.
+Systemet hanterar allt från sökning och filtrering av resor till bokning, simulerad betalning och avbokning. Allt kopplat mot en riktig databas.
 
 ---
 
@@ -66,7 +66,7 @@ RKD Travels is a web-based travel booking system we built from scratch to show h
 
 ## About the project
 
-The goal was to build something that actually works end-to-end — from browsing trips to completing a (simulated) payment. Everything is connected to a real database and handles things like seat availability and cancellations.
+The system handles everything from searching and filtering trips to booking, simulated payment and cancellations. Everything is connected to a real database and handles things like seat availability and cancellations.
 
 ---
 
